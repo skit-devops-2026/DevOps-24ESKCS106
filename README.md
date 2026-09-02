@@ -7,17 +7,16 @@
 
 | Roll No. | Name | GitHub username |
 |---|---|---|
-| <roll> | <name> | <username> |
+| 24ESKCS106 | Devang Bisartii | bisartii |
 
 ## About
-
-<Two or three sentences on what this application does.>
+At Digital Bank, we are redefining how individuals and modern enterprises interact with their finances. Born out of a vision to bridge the gap between complex financial infrastructure and everyday usability, our platform delivers a seamless, secure, and intuitive digital banking experience right to your screen.
 
 ## Tech stack
 
-- Frontend: <e.g. React>
-- Backend: <e.g. Node.js / Express>
-- Database: <e.g. PostgreSQL>
+- Frontend: HTML,CSS,JS
+- Backend: N/A
+- Database: N/A
 
 ## Running locally
 
