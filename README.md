@@ -1,4 +1,4 @@
-# <Project Name>
+# Digital Bank
 
 > Replace every angle-bracket placeholder below. The hygiene check in CI will
 > fail until you do.
