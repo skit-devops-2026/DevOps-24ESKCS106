@@ -12,7 +12,6 @@ build:
 run:
 	@echo "Open home.html in a browser"
 
-# Needed from M4 onwards
 docker-build:
 	@echo "TODO: docker build for frontend and backend" && exit 1
 
