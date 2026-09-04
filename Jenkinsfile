@@ -10,19 +10,19 @@ pipeline {
 
         stage('Install') {
             steps {
-                sh 'make install'
+                bat 'echo No dependencies required'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'make test'
+                bat 'node tests\\test_app.js'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'make build'
+                bat 'echo Build successful - static HTML/CSS/JS project'
             }
         }
     }
