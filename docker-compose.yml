@@ -1,0 +1,84 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        COMMIT_SHA: ${COMMIT_SHA:-0348982}
+    image: devops-digital-bank:latest
+    container_name: digital-bank-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - bank-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:80/health >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 3s
+
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:1.4.1
+    container_name: digital-bank-nginx-exporter
+    command:
+      - -nginx.scrape-uri=http://web:80/stub_status
+    ports:
+      - "9113:9113"
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    networks:
+      - bank-net
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: digital-bank-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.console.libraries=/usr/share/prometheus/console_libraries
+      - --web.console.templates=/usr/share/prometheus/consoles
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    depends_on:
+      nginx-exporter:
+        condition: service_started
+    networks:
+      - bank-net
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: digital-bank-grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
+    volumes:
+      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      prometheus:
+        condition: service_started
+    networks:
+      - bank-net
+
+networks:
+  bank-net:
+    driver: bridge
+
+volumes:
+  prometheus_data:
+  grafana_data:
