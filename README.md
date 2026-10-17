@@ -65,16 +65,16 @@ curl -i http://localhost:8080/health
 
 ## Container Registry
 
-- **Repository**: `bisartii/digital-bank`
+- **Repository**: `devangbisartii/digital-bank`
 - **Tags**: `latest`, `<git-commit-sha>`
 
 ### Publishing to Docker Hub
 ```bash
 # Authenticate to Docker Hub
-docker login
+docker login -u devangbisartii
 
 # Push the verified image
-docker push bisartii/digital-bank:latest
+docker push devangbisartii/digital-bank:latest
 ```
 
 ## Monitoring Stack (M6)
@@ -100,7 +100,7 @@ Kubernetes manifests are located in `k8s/`:
 kind create cluster --name digital-bank-cluster
 
 # Load image into cluster nodes
-kind load docker-image bisartii/digital-bank:latest --name digital-bank-cluster
+kind load docker-image devangbisartii/digital-bank:latest --name digital-bank-cluster
 
 # Apply manifests
 kubectl apply -f k8s/

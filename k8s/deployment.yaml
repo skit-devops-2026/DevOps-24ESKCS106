@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: digital-bank
-          image: bisartii/digital-bank:latest
+          image: devangbisartii/digital-bank:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80

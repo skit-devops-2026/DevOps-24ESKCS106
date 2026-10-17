@@ -13,7 +13,7 @@ run:
 	@echo "Open home.html in a browser"
 
 docker-build:
-	docker build --build-arg COMMIT_SHA=$$(git rev-parse --short HEAD 2>/dev/null || echo "latest") -t devops-digital-bank:latest -t bisartii/digital-bank:latest .
+	docker build --build-arg COMMIT_SHA=$$(git rev-parse --short HEAD 2>/dev/null || echo "latest") -t devops-digital-bank:latest -t devangbisartii/digital-bank:latest -t bisartii/digital-bank:latest .
 
 docker-up:
 	docker compose up --build -d
