@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DigitalBank User Dashboard - Manage your balance, cards, and recent transactions.">
+  <title>Account Dashboard | DigitalBank</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="home.html" class="logo">
+          <span class="logo-icon">🏦</span>
+          <span>DigitalBank</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="profile.html" class="btn btn-outline">My Profile</a>
+          <a href="login.html" class="btn btn-primary">Sign Out</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard-container">
+    <div class="container">
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>Welcome, Devang Bisartii</h1>
+          <p>Account No: DB-24ESKCS106 • Active Tier: Premium Platinum</p>
+        </div>
+        <div>
+          <a href="transfer-money.html" class="btn btn-primary">Transfer Funds</a>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+          <ul class="sidebar-menu">
+            <li><a href="dashboard.html" class="sidebar-link active">📊 Overview</a></li>
+            <li><a href="transactions.html" class="sidebar-link">📝 Transactions</a></li>
+            <li><a href="transfer-money.html" class="sidebar-link">💸 Transfer Money</a></li>
+            <li><a href="cards.html" class="sidebar-link">💳 My Cards</a></li>
+            <li><a href="profile.html" class="sidebar-link">👤 Profile</a></li>
+            <li><a href="settings.html" class="sidebar-link">⚙️ Settings</a></li>
+          </ul>
+        </aside>
+
+        <!-- Main Panel -->
+        <div class="dashboard-main">
+          <!-- Balance Summary Banner -->
+          <div class="balance-banner">
+            <div>
+              <span class="badge badge-success">Live Account Status</span>
+              <div class="balance-amount">₹1,45,250.00</div>
+              <p style="color: #94a3b8; margin: 0;">Total Available Balance across Checking & Savings</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="transfer-money.html" class="btn btn-white">Send Money</a>
+              <a href="transactions.html" class="btn btn-outline" style="color: #fff; border-color: #475569;">Statement</a>
+            </div>
+          </div>
+
+          <!-- Quick Stats Cards -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="card">
+              <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Monthly Inflow</span>
+              <h3 style="margin-top: 0.5rem; color: var(--accent);">+ ₹42,500.00</h3>
+              <small style="color: var(--text-muted);">+15% from last month</small>
+            </div>
+            <div class="card">
+              <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Monthly Outflow</span>
+              <h3 style="margin-top: 0.5rem; color: #ef4444;">- ₹18,320.00</h3>
+              <small style="color: var(--text-muted);">Within budget limits</small>
+            </div>
+            <div class="card">
+              <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">Fixed Deposits</span>
+              <h3 style="margin-top: 0.5rem; color: var(--primary);">₹2,00,000.00</h3>
+              <small style="color: var(--accent);">Accruing 7.2% p.a.</small>
+            </div>
+          </div>
+
+          <!-- Recent Transactions Preview -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Recent Transactions</h3>
+              <a href="transactions.html" style="color: var(--primary); font-size: 0.875rem; font-weight: 600;">View All →</a>
+            </div>
+            <table class="tx-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>17 Oct 2026</td>
+                  <td>Salary Deposit - TechCorp Solutions</td>
+                  <td>Income</td>
+                  <td class="positive">+ ₹45,000.00</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>15 Oct 2026</td>
+                  <td>Electricity Bill Auto-Debit</td>
+                  <td>Utilities</td>
+                  <td class="negative">- ₹1,450.00</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>12 Oct 2026</td>
+                  <td>Amazon Online Retail</td>
+                  <td>Shopping</td>
+                  <td class="negative">- ₹3,299.00</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>08 Oct 2026</td>
+                  <td>UPI Transfer - Rahul Sharma</td>
+                  <td>Transfer</td>
+                  <td class="negative">- ₹500.00</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a href="home.html" class="logo" style="color: #ffffff;">
+            <span class="logo-icon">🏦</span>
+            <span>DigitalBank</span>
+          </a>
+          <p>Next-generation digital banking platform engineered for security, speed, and simplicity.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Banking</h4>
+          <a href="services.html">Personal Checking</a>
+          <a href="services.html">Savings Accounts</a>
+          <a href="cards.html">Digital Cards</a>
+          <a href="transfer-money.html">Fund Transfers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="transactions.html">Transaction History</a>
+          <a href="profile.html">My Profile</a>
+          <a href="settings.html">Security Settings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="contact.html">Help Center</a>
+          <a href="contact.html">24/7 Live Support</a>
+          <a href="about.html">About Digital Bank</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DigitalBank. Roll No: 24ESKCS106. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DigitalBank - Customer Profile and Account Verification Details.">
+  <title>User Profile | DigitalBank</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="home.html" class="logo">
+          <span class="logo-icon">🏦</span>
+          <span>DigitalBank</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="dashboard.html" class="btn btn-outline">Dashboard</a>
+          <a href="login.html" class="btn btn-primary">Sign Out</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard-container">
+    <div class="container">
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>Account Profile &amp; KYC</h1>
+          <p>Personal profile, identity verification, and contact preferences.</p>
+        </div>
+        <div>
+          <span class="badge badge-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">KYC Verified ✔</span>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+          <ul class="sidebar-menu">
+            <li><a href="dashboard.html" class="sidebar-link">📊 Overview</a></li>
+            <li><a href="transactions.html" class="sidebar-link">📝 Transactions</a></li>
+            <li><a href="transfer-money.html" class="sidebar-link">💸 Transfer Money</a></li>
+            <li><a href="cards.html" class="sidebar-link">💳 My Cards</a></li>
+            <li><a href="profile.html" class="sidebar-link active">👤 Profile</a></li>
+            <li><a href="settings.html" class="sidebar-link">⚙️ Settings</a></li>
+          </ul>
+        </aside>
+
+        <!-- Main Panel -->
+        <div class="dashboard-main">
+          <div class="dashboard-card">
+            <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+              <div class="avatar" style="width: 80px; height: 80px; font-size: 1.75rem;">DB</div>
+              <div>
+                <h2>Devang Bisartii</h2>
+                <p style="margin: 0; color: var(--text-muted);">Roll No: 24ESKCS106 • Customer ID: CID-98012</p>
+                <span class="badge badge-primary" style="margin-top: 0.4rem;">Digital Banking Member since 2026</span>
+              </div>
+            </div>
+
+            <div class="transfer-form">
+              <div>
+                <label style="font-weight: 600; font-size: 0.875rem; color: var(--secondary);">Full Name</label>
+                <input type="text" class="card" value="Devang Bisartii" readonly style="width: 100%; margin-top: 0.35rem; padding: 0.75rem;">
+              </div>
+
+              <div>
+                <label style="font-weight: 600; font-size: 0.875rem; color: var(--secondary);">Email Address</label>
+                <input type="email" class="card" value="devangbisartii1226@gmail.com" readonly style="width: 100%; margin-top: 0.35rem; padding: 0.75rem;">
+              </div>
+
+              <div>
+                <label style="font-weight: 600; font-size: 0.875rem; color: var(--secondary);">Registered Mobile</label>
+                <input type="text" class="card" value="+91 98765 43210" readonly style="width: 100%; margin-top: 0.35rem; padding: 0.75rem;">
+              </div>
+
+              <div>
+                <label style="font-weight: 600; font-size: 0.875rem; color: var(--secondary);">Account Type</label>
+                <input type="text" class="card" value="Premier Checking &amp; High-Yield Savings" readonly style="width: 100%; margin-top: 0.35rem; padding: 0.75rem;">
+              </div>
+
+              <div class="full-width">
+                <label style="font-weight: 600; font-size: 0.875rem; color: var(--secondary);">Permanent Address</label>
+                <input type="text" class="card" value="Swami Keshvanand Institute of Technology (SKIT), Jaipur, Rajasthan" readonly style="width: 100%; margin-top: 0.35rem; padding: 0.75rem;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 DigitalBank. Roll No: 24ESKCS106. All rights reserved.</p>
+        <div>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common/navbar.js"></script>
+</body>
+</html>

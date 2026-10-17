@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DigitalBank - Search and View Past Account Transactions and Statements.">
+  <title>Transaction History | DigitalBank</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="home.html" class="logo">
+          <span class="logo-icon">🏦</span>
+          <span>DigitalBank</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="dashboard.html" class="btn btn-outline">Dashboard</a>
+          <a href="login.html" class="btn btn-primary">Sign Out</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard-container">
+    <div class="container">
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <h1>Transaction History</h1>
+          <p>Real-time audit log of all account deposits, debits, and transfers.</p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="alert('Downloading Monthly Statement PDF...')">📥 Export PDF Statement</button>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+          <ul class="sidebar-menu">
+            <li><a href="dashboard.html" class="sidebar-link">📊 Overview</a></li>
+            <li><a href="transactions.html" class="sidebar-link active">📝 Transactions</a></li>
+            <li><a href="transfer-money.html" class="sidebar-link">💸 Transfer Money</a></li>
+            <li><a href="cards.html" class="sidebar-link">💳 My Cards</a></li>
+            <li><a href="profile.html" class="sidebar-link">👤 Profile</a></li>
+            <li><a href="settings.html" class="sidebar-link">⚙️ Settings</a></li>
+          </ul>
+        </aside>
+
+        <!-- Main Panel -->
+        <div class="dashboard-main">
+          <div class="dashboard-card">
+            <!-- Filter toolbar -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+              <input type="text" placeholder="Search by merchant or ref..." style="flex: 1; padding: 0.6rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+              <select style="padding: 0.6rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #fff;">
+                <option>All Categories</option>
+                <option>Income &amp; Deposits</option>
+                <option>Bills &amp; Utilities</option>
+                <option>Shopping</option>
+                <option>Transfers</option>
+              </select>
+            </div>
+
+            <!-- Transaction Table -->
+            <table class="tx-table">
+              <thead>
+                <tr>
+                  <th>Date &amp; Time</th>
+                  <th>Transaction ID</th>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>17 Oct 2026, 14:32</td>
+                  <td><code>TXN-9842106</code></td>
+                  <td>Salary Deposit - TechCorp</td>
+                  <td>Income</td>
+                  <td class="positive">+ ₹45,000.00</td>
+                  <td><span class="badge badge-success">Success</span></td>
+                </tr>
+                <tr>
+                  <td>15 Oct 2026, 09:15</td>
+                  <td><code>TXN-9842011</code></td>
+                  <td>State Electricity Utility</td>
+                  <td>Utilities</td>
+                  <td class="negative">- ₹1,450.00</td>
+                  <td><span class="badge badge-success">Success</span></td>
+                </tr>
+                <tr>
+                  <td>12 Oct 2026, 18:40</td>
+                  <td><code>TXN-9839942</code></td>
+                  <td>Amazon India Retail</td>
+                  <td>Shopping</td>
+                  <td class="negative">- ₹3,299.00</td>
+                  <td><span class="badge badge-success">Success</span></td>
+                </tr>
+                <tr>
+                  <td>08 Oct 2026, 11:20</td>
+                  <td><code>TXN-9838125</code></td>
+                  <td>UPI to Rahul Sharma</td>
+                  <td>Transfer</td>
+                  <td class="negative">- ₹500.00</td>
+                  <td><span class="badge badge-success">Success</span></td>
+                </tr>
+                <tr>
+                  <td>03 Oct 2026, 20:05</td>
+                  <td><code>TXN-9834102</code></td>
+                  <td>Starbucks Coffee</td>
+                  <td>Food &amp; Dining</td>
+                  <td class="negative">- ₹380.00</td>
+                  <td><span class="badge badge-success">Success</span></td>
+                </tr>
+                <tr>
+                  <td>01 Oct 2026, 00:01</td>
+                  <td><code>TXN-9830001</code></td>
+                  <td>Monthly Savings Interest Credited</td>
+                  <td>Interest</td>
+                  <td class="positive">+ ₹684.50</td>
+                  <td><span class="badge badge-success">Success</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 DigitalBank. Roll No: 24ESKCS106. All rights reserved.</p>
+        <div>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common/navbar.js"></script>
+</body>
+</html>
