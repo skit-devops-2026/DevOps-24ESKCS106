@@ -12,3 +12,4 @@ k8s/
 docs/
 Dockerfile
 docker-compose.yml
+render.yaml
