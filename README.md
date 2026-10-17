@@ -51,9 +51,10 @@ docker compose logs -f
 
 ## Live URL
 
-- **Local Deployment URL (Verified)**: http://localhost:8080
-- **Health Check Endpoint**: http://localhost:8080/health
-- **Public Production URL**: *(To be populated once public hosting is activated, e.g., Render, Railway, or Fly.io)*
+- **Production Live URL**: https://digital-bank-dmfu.onrender.com
+- **Production Health Endpoint**: https://digital-bank-dmfu.onrender.com/health
+- **Local Deployment URL**: http://localhost:8080
+- **Local Health Endpoint**: http://localhost:8080/health
 
 ## Health Endpoint
 

@@ -15,6 +15,10 @@ COPY . /usr/share/nginx/html/
 # Embed the actual Git commit SHA into /health file
 RUN printf "%s\n" "${COMMIT_SHA}" > /usr/share/nginx/html/health
 
+# Copy startup hook to dynamically update /health from environment if present (e.g. RENDER_GIT_COMMIT)
+COPY scripts/set-health-sha.sh /docker-entrypoint.d/40-commit-sha.sh
+RUN chmod +x /docker-entrypoint.d/40-commit-sha.sh
+
 # Expose web server port
 EXPOSE 80
 
