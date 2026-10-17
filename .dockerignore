@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.env.*
+*.md
+Makefile
+Jenkinsfile
+tests/
+scripts/
+monitoring/
+k8s/
+docs/
+Dockerfile
+docker-compose.yml
