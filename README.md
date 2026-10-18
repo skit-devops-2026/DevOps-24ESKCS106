@@ -1,5 +1,7 @@
 # Digital Bank
 
+[![CI](https://github.com/skit-devops-2026/DevOps-24ESKCS106/actions/workflows/ci.yml/badge.svg)](https://github.com/skit-devops-2026/DevOps-24ESKCS106/actions/workflows/ci.yml)
+
 ## Author
 
 | Roll No. | Name | GitHub username |
